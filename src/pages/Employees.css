@@ -1,0 +1,56 @@
+header{
+    display: flex;
+    background-color: green;
+}
+header .title{
+    width: 70vw;
+}
+header .addEmployee{
+    width: 30vw;
+}
+.addEmployee{
+    display: flex;
+    justify-content: center;
+}
+.addEmployee a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.8rem;
+}
+.employees{
+    display: flex;
+    flex-direction: column;
+}
+.employees li{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    /* margin-left: 5%; */
+    padding-right: 2%;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-bottom: solid black 1px;
+}
+.name{
+    font-size: 1.3rem;
+}
+.identifyingInfo{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 90%;
+}
+.initials{
+    background-color: rgba(0, 128, 0, 0.5);
+    border-radius: 50%;
+    font-weight: 600;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20%;
+    margin-top: .5%;
+    padding-top: .5%;
+}
+.toProfile{
+    margin-right: 5%;
+    font-size: 1.5rem;
+}

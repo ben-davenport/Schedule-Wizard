@@ -1,0 +1,48 @@
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: green;
+    padding-left:3%;
+    padding-right: 3%;
+    align-items: center;
+}
+.details{
+    border: 100px solid red;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+}
+.nameInfo{
+    display: flex;
+    flex-wrap: wrap;
+    height: 15vh;
+    justify-content: space-around;
+    border: 1px solid blue;
+    align-items: flex-start;
+    border-bottom: 1px solid gray;
+}
+.initials{
+    width: 50%;
+    height: 50%;
+    border: 1px solid red;
+}
+.name{
+    width: 50%;
+    height: 100%;
+    border: 1px solid green;
+}
+.email{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-right: 5%;
+    padding-left: 3%;
+}
+.phone{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-right: 5%;
+    padding-left: 3%;
+}

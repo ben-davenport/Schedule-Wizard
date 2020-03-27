@@ -1,0 +1,57 @@
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+}
+.Calendar{
+    display:flex;
+    justify-content: center;
+    background: whitesmoke;
+    height: 50vh;
+    width: 100vw;
+}
+
+.oneDay{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.prefHeader{
+    list-style: none;
+    padding: 0;
+    padding-right: 5%;
+    margin: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(190, 190, 190);
+}
+.dayDate{
+    width: 30vw;
+    height: 10vh;
+    background-color: rgb(190, 190, 190);
+    font-size: 1.4rem;
+}
+.addPref{
+    background-color: rgb(190, 190, 190);
+    /* width: 10vw; */
+    font-size: 1.5rem;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    background-color: white;
+    /* color: white; */
+}
+.preference{
+    padding-left: 3%;
+    width: 100vw;
+    background-color: lightgray;
+    margin: 0;
+}

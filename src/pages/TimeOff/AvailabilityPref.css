@@ -1,0 +1,62 @@
+.modalTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 20%;
+    /* font-size: 1.5rem; */
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+}
+.close{
+    font-size: 1.5rem;
+}
+.TitleHero{
+    font-size: 1.5rem;
+}
+.date{
+    width: 100vw;
+    padding-left: 30%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray;
+}
+.availabilityOptions{
+    width: 100vw;
+}
+.availabilityOptions {
+    border: 1px solid black;
+}
+.repeated{
+    color: white;
+}
+.repeatRadio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* height: 10%; */
+    /* width: 20% */
+}
+.repeatRadio input{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+.repeatRadio label{
+    margin: 0;
+    height: 100%;
+    width: 30%;
+}
+
+#notes{
+    height: 30vh;
+    width: 90vw;
+}
+#submit{
+    height: 10vh;
+    width: 100vw;
+}
