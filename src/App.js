@@ -13,6 +13,7 @@ import TimeOff from './pages/TimeOff/SingleTO';
 import MySchedule from './pages/MySchedule';
 import AddEmployee from './pages/Admin/AddEmployee';
 import Profile from './pages/Profile';
+import Login from './pages/Home/Login';
 
 class App extends React.Component{
     constructor(props){
@@ -37,6 +38,7 @@ class App extends React.Component{
             <Route path="/u/timeoff" component={TimeOff}/>
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path="/u/admin/addemployee" component={AddEmployee}/>
+            <Route path='/login' component={Login} />
 
         </Router>)
     }

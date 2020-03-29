@@ -11,19 +11,44 @@ class SingleTO extends React.Component{
 
     render(){
         return(<div>
-            <div className="Title">
-                <p>New TO Request</p>
-                <p>X</p>
+            <div className="title">
+                <div className="close">X</div>
+                <div className="titleContainer">
+                    <div className="theTitle">New Time Off Request</div>
+                </div>
             </div>
-            <ul className="details">
-                <li>Name:</li>
-                <li>All Day?</li>
-                <li>y/n</li>
-                <li>Start Date:</li>
-                <li>End Date:</li>
-                <li>Notes: </li>
-            </ul>
-            <button>Submit</button>
+            <form className="details">
+                <ul className="name">
+                    <li>Name:</li>
+                    <li>Hermione Granger</li>
+                </ul>
+                <div className="allDay">
+                    <p>All Day?</p>
+                    <label for="allDay">Yes 
+                        <input type="radio" id="allDay" name="allDay" value="allDay" />
+                    </label>
+                    <label for="notAllDay">No
+                        <input type="radio" id="notAllDay" name="allDay" value="notAllDay" />
+                    </label>
+                </div>
+                <div className="dates">
+                    <div className="eachDate">
+                        <label for="startDate">Start Date:</label><br />
+                        <input type="date" id="startDate" name="timeOffdates" />
+                    </div>
+                    <div className="eachDate">
+                        <label for="endDate">End Date:</label><br />      
+                        <input type="date" id="endDate" name="timeOffdates" />
+                    </div>              
+                </div>
+                <div className="notesSection">
+                    <label for="notes">Notes:</label>
+                        <input type="text" id="notes" name="notes" />
+                </div>
+                <div className="submitButton">
+                    <input type="submit" value="submit" id="submit" />
+                </div>
+            </form>
         </div>)
     }
 }

@@ -21,6 +21,8 @@ class Signup extends React.Component{
                     <input type="password" id="password" name="password"></input>
                     <label for="confirmPassword">Confirm Password:</label>
                     <input type="password" id="confirmPassword" name="confirmPassword"></input>
+                    <br />
+                    <input type="submit" value="submit" />
                 </form>
         </div>)
     }

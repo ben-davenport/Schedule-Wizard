@@ -20,10 +20,8 @@ class Profile extends React.Component{
             </div>
             <div classsName="details">
                 <div className="nameInfo">
-                    <ul>
-                        <li className="initials">IN</li>
-                        <li className="name"> My Name</li>
-                    </ul>
+                        <div className="initials">HP</div>
+                        <div className="name"> Harry Potter</div>
                 </div>
                 <ul className="email">
                     <li>Email: </li>

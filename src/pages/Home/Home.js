@@ -29,11 +29,13 @@ class Home extends React.Component{
                 <div classsName="inputs">
                     <form>
                         <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName"></input>
+                            <input type="text" id="firstName" name="firstName"></input>
                         <label for="lastName">Last name:</label>
-                        <input type="text" id="lastName" name="lastName"></input>
+                            <input type="text" id="lastName" name="lastName"></input>
                         <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email"></input>
+                            <input type="email" id="email" name="email"></input>
+                            <br />
+                        <input className="submitBtn" type="submit" value="submit" id="submit" />
                     </form>
                 </div>
             </div>

@@ -1,0 +1,67 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.close{
+    width: 10%;
+}
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.details{
+    background-color: white;
+    display: flex;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: gray 1px solid;
+}
+.allDay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 25%;
+    border-bottom: 1px solid gray;
+}
+
+.allDay label{
+    color: black;
+}
+
+.dates{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+.dates label{
+    color: black;
+}
+.eachDate{
+    width: 100%;
+    height: 50%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid gray;
+}
+.notesSection{
+    /* display: flex; */
+    border: 1px solid red;
+    flex-direction: column;
+    width: 50%;
+
+}
+.notesSection input{
+    height: 10px;
+    width: 50%;
+}
+.notesSection label{
+    color: black;
+}

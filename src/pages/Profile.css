@@ -7,30 +7,26 @@
     padding-right: 3%;
     align-items: center;
 }
-.details{
-    border: 100px solid red;
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-}
+
 .nameInfo{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
     flex-wrap: wrap;
-    height: 15vh;
-    justify-content: space-around;
-    border: 1px solid blue;
-    align-items: flex-start;
+    height: 10vh;
+    width: 100vw;
     border-bottom: 1px solid gray;
 }
 .initials{
-    width: 50%;
-    height: 50%;
-    border: 1px solid red;
+    width: 10%;
+    height: 40%;
 }
 .name{
-    width: 50%;
-    height: 100%;
-    border: 1px solid green;
+    /* width: 50%;
+    height: 100%; */
+    padding-right: 5%;
 }
 .email{
     display: flex;
@@ -38,11 +34,15 @@
     border-bottom: 1px solid gray;
     padding-right: 5%;
     padding-left: 3%;
+    height: 10vh;
+    align-items: center;
 }
 .phone{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid gray;
     padding-right: 5%;
     padding-left: 3%;
+    height: 10vh;
 }
