@@ -13,8 +13,8 @@ class AddEmployee extends React.Component{
     render(){
         return(<div>
             <div className="title">
-                <div>X</div>
-                <div>Add Employee</div>
+                <div className="exit">X</div>
+                <div className="titleName">Add Employee</div>
             </div>
             <form>
                     <label for="firstName">First Name:</label>

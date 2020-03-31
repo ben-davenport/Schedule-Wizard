@@ -8,6 +8,7 @@ import Employees from './pages/Employees';
 import Availability from './pages/TimeOff/Availability';
 import AvailabilityPref from './pages/TimeOff/AvailabilityPref';
 import Addshifts from './pages/Admin/Addshifts';
+import EditShift from './pages/Admin/EditShift';
 import Signup from './pages/Home/Signup';
 import TimeOff from './pages/TimeOff/SingleTO';
 import MySchedule from './pages/MySchedule';
@@ -34,6 +35,7 @@ class App extends React.Component{
             <Route exact path="/u/availability" component={Availability}/>
             <Route path="/u/availabilitypreference" component={AvailabilityPref}/>
             <Route path="/u/admin/newshift" component={Addshifts}/>
+            <Route path='/u/admin/editshift' component={EditShift} />
             <Route path="/register" component={Signup}/>
             <Route path="/u/timeoff" component={TimeOff}/>
             <Route path="/u/myschedule" component={MySchedule}/>

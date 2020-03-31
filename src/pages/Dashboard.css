@@ -1,0 +1,10 @@
+.nextShift{
+    padding-left: 3%;
+    padding-right: 5%;
+    border-bottom: 1px solid gray; 
+};
+.firstShift{
+    list-style: none;
+    padding-left: 3%;
+    padding-right: 5%;
+background-color: green;};

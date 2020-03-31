@@ -10,15 +10,24 @@ class Signup extends React.Component{
     render(){
         return(
         <div>
+            <header className="title">Register<br/></header>
             <form>
+                    <br />
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName"></input>
-                    <label for="lastName">Last name:</label>
+                    <br />
+                    <label for="lastName">Last Name:</label>
                     <input type="text" id="lastName" name="lastName"></input>
+                    <br />
+                    <label for="company">Company Name:</label>
+                    <input type="text" id="company" name="company"></input>
+                    <br />
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email"></input>
+                    <br />
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password"></input>
+                    <br />
                     <label for="confirmPassword">Confirm Password:</label>
                     <input type="password" id="confirmPassword" name="confirmPassword"></input>
                     <br />

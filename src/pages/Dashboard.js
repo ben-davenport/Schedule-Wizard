@@ -14,19 +14,20 @@ class Dashboard extends React.Component{
 
     render(){
         return(
-        <div>
+        <div className="frame">
             <div className="nextShift">
-                <ul>
-                    <li id="day"></li>
-                    <li id="startTime"></li>
-                    <li id="endTime"></li>
+                <ul>Next Shift
+                    <li id="day">Day, Date</li>
+                    <li id="startTime">Start Time</li>
+                    <li id="endTime">End Time</li>
                 </ul>
             </div>
             <div className="todaySchedule">
+                <p>Scheduled Today</p>
                 <ul className="firstShift">
-                    <li id="name"></li>
-                    <li id="start"></li>
-                    <li id="end"></li>
+                    <li id="name">Belatrix</li>
+                    <li id="start">11:30</li>
+                    <li id="end">2:30</li>
                 </ul>
             </div>
         </div>)

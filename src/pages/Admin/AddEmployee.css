@@ -1,0 +1,12 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.titleName{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.exit{
+    width: 5vw;
+}

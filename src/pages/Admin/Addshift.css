@@ -1,0 +1,19 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.titleName{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.newShiftDetails{
+    background-color: red;
+
+}
+.exit{
+    width: 5vw;
+}
+.theLabels{
+    border: 1px solid red;
+}
