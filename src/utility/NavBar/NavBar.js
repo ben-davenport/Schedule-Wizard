@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component{
     handleClick = ()=>{
@@ -27,17 +28,17 @@ class NavBar extends React.Component{
             <a href="/u" className="logo">logo</a>
             <ul className="mainNav" id="js-menu">
                 <li>
-                    <a className="navLink" href="/">Notifications</a></li>
+                    <Link className="navLink" to="/">Notifications</Link></li>
                 <li>
-                    <a className="navLink" href="/u/dashboard">Dashboard</a></li>
+                    <Link className="navLink" to="/u/dashboard">Dashboard</Link></li>
                 <li>
-                    <a className="navLink" href="/u/admin/newshift">Scheduler</a></li>
+                    <Link className="navLink" to="/u/admin/newshift">Scheduler</Link></li>
                 <li>
-                    <a className="navLink" href="/u/timeoff">Time Off</a></li>
+                    <Link className="navLink" to="/u/timeoff">Time Off</Link></li>
                 <li>
-                    <a className="navLink" href="/u/coworkers">Co-Workers</a></li>
+                    <Link className="navLink" to="/u/coworkers">Co-Workers</Link></li>
                 <li>
-                    <a className="navLink" href="/u/availability">Availability</a></li>
+                    <Link className="navLink" to="/u/availability">Availability</Link></li>
             </ul>
         </nav>
         )

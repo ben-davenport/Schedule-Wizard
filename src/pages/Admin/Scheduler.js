@@ -12,10 +12,10 @@ class Scheduler extends React.Component{
     render(){
         return(
         <div>
-            <div className="Title">
-                <p>Scheduler</p>
-                <div className="newShift">+</div>>
-            </div>
+            <header className="title">
+                <h1>Scheduler</h1>
+                <div className="newShift">+</div>
+            </header>
             <div className="calendar">
                 <ul>
                     <li className="date">

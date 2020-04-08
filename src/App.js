@@ -1,8 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css'
-import Home from './pages/Home/Home';
+
+import Modal from './utility/Modal/Modal';
 import NavBar from './utility/NavBar/NavBar';
+
+import Home from './pages/Home/Home';
 import Dashboard from './pages/Dashboard';
 import Employees from './pages/Employees';
 import Availability from './pages/TimeOff/Availability';
@@ -15,6 +18,7 @@ import MySchedule from './pages/MySchedule';
 import AddEmployee from './pages/Admin/AddEmployee';
 import Profile from './pages/Profile';
 import Login from './pages/Home/Login';
+import Scheduler from './pages/Admin/Scheduler';
 
 class App extends React.Component{
     constructor(props){
@@ -28,6 +32,7 @@ class App extends React.Component{
         return(
         <Router>
             <Route path="/u" component={NavBar} />
+            <Route path="/" component={Modal} />
             <Route exact path="/" component={Home} />
             <Route path="/u/dashboard" component={Dashboard}/>
             <Route path="/u/coworkers" component={Employees}/>
@@ -41,6 +46,7 @@ class App extends React.Component{
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path="/u/admin/addemployee" component={AddEmployee}/>
             <Route path='/login' component={Login} />
+            <Route path='/u/admin/scheduler' component={Scheduler} />
 
         </Router>)
     }
