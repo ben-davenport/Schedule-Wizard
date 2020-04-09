@@ -17,8 +17,7 @@ class Home extends React.Component{
         return(
         <div>
             <ul className="login">
-                <li><Link className="login" to="/register">New Employee</Link></li>
-                {/* <li className="greenLogin"><Link className="greenLogin" href="/login">Login</Link></li> */}
+                <li className="login" onClick={()=>{this.props.openModal('open', "Sign up")}}>New Employee</li>
                 <li className="greenLogin" onClick={()=>{this.props.openModal('open', "Log in")}}>Login</li>
 
             </ul>

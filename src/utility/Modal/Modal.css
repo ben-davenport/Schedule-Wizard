@@ -1,6 +1,6 @@
 .site-modal {
-    position: fixed; /* Stay in place */
-    z-index: 10000; /* Sit on top */
+    position: fixed; /*Stay in place */
+    z-index: 1000; /*Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -13,18 +13,25 @@
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    padding: 10px;
+    border: 2px solid #888;
+    width: 90%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
     }
 
 .site-modal .close {
+    /* padding-right: -40%; */
+    /* margin-right: -7%; */
+    width: 10px;
     color: #aaa;
-    float: right;
-    font-size: 28px;
+    float: left;
+    font-size: 1.5rem;
     font-weight: bold;
     width: 23px;
-    padding: 4px;
+    /* padding-right: -10%; */
+    padding-left: -10px;
     }
 
 .close:hover,

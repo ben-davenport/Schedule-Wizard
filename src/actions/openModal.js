@@ -1,6 +1,6 @@
 export default (openClose, content)=>{
     return{
-        type: "OPEN_MODAL",
+        type: "CHANGE_MODAL",
         payload: {
             openClose,
             content,

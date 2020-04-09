@@ -7,20 +7,22 @@ class Login extends React.Component{
             
         }
     }
- 
+
     render(){
+        let titleColor = {color:'white'};
         return(
-        <div>
+        
             <form>
-                <label for="email">Email Address:</label>
+                <h1 className='title'>Login:</h1>
+                <label htmlFor="email">Email Address:</label>
                     <input type="email" id="email" name="email"></input>
-                <label for="password">Password:</label>
+                <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password"></input>
                     <br />
                 <input type="submit" value="Log in" name="submit" />
-
+                <br />
             </form>
-        </div>)
+        )
     }
 }
 export default Login;

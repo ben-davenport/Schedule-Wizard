@@ -4,7 +4,7 @@ const initState = {
 }
 
 export default(state=initState, action)=>{
-    if(action.type === 'OPEN_MODAL'){
+    if(action.type === 'CHANGE_MODAL'){
         return action.payload;
     }
     return state;
