@@ -11,6 +11,8 @@ import Employees from './pages/Employees';
 import Availability from './pages/TimeOff/Availability';
 import MySchedule from './pages/MySchedule';
 import Scheduler from './pages/Admin/Scheduler';
+import Profile from './pages/Profile';
+
 
 
 
@@ -33,6 +35,7 @@ class App extends React.Component{
             <Route exact path="/u/availability" component={Availability}/>
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path='/u/admin/scheduler' component={Scheduler} />
+            <Route path='/u/profile' component={Profile} />
 
 
         </Router>)

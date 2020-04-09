@@ -14,7 +14,6 @@ class Addshifts extends React.Component{
         return(
         <div>
             <header className="title">
-                <div className="exit">X</div>
                 <div className="titleName">Add Shift</div>
             </header>
             <form className="newShiftDetails">

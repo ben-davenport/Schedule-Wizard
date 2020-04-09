@@ -13,7 +13,6 @@ class EditShift extends React.Component{
         return(
         <div>        
             <header className="title">
-                <div className="exit">X</div>
                 <div className="titleName">Edit Shift</div>
             </header>
             <form className="newShiftDetails">
@@ -41,6 +40,8 @@ class EditShift extends React.Component{
                     <br />
                     <br />
                 <input type="button" value="Delete Shift" id="delete"/>
+                    <br />
+                    <br/>
             </form>
         </div>
         )};

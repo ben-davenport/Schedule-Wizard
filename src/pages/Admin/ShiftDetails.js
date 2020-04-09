@@ -1,5 +1,8 @@
 import React from 'react';
 import './ShiftDetails.css';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
+import openModal from '../../actions/openModal';
 
 class ShiftDetails extends React.Component{
     constructor(props){
@@ -13,9 +16,8 @@ class ShiftDetails extends React.Component{
         return(
         <div>
             <header>
-                <div className="back"></div>
                 <div className="title">Shift Details</div>
-                <div className="edit">Edit</div>
+                <div className="edit" onClick={()=>{this.props.openModal('open', "Edit shift")}}>EDIT</div>
             </header>
             <div className="details">
                 <div className="date">Day, Date</div>
@@ -26,4 +28,10 @@ class ShiftDetails extends React.Component{
         </div>)
     }
 }
-export default ShiftDetails;
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators({
+        openModal: openModal,
+    }, dispatcher)
+};
+
+export default connect(null, mapDispatchToProps)(ShiftDetails);

@@ -13,7 +13,6 @@ class AddEmployee extends React.Component{
     render(){
         return(<div>
             <div className="title">
-                <div className="exit">X</div>
                 <div className="titleName">Add Employee</div>
             </div>
             <form>
@@ -27,6 +26,7 @@ class AddEmployee extends React.Component{
                         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
                     <br />
                     <input type="submit" value="Add Employee" />
+                    <br />
                 </form>
         </div>)
     }

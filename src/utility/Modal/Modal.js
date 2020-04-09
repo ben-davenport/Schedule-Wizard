@@ -11,6 +11,7 @@ import AvailabilityPref from '../../pages/TimeOff/AvailabilityPref';
 import TimeOff from '../../pages/TimeOff/SingleTO';
 import Profile from '../../pages/Profile';
 import openModal from '../../actions/openModal';
+import ShiftDetails from '../../pages/Admin/ShiftDetails';
 
 class Modal extends React.Component{
     constructor(props){
@@ -33,7 +34,9 @@ class Modal extends React.Component{
             "Log in" : <Login />,
             "Sign up" : <Signup />,
             "Add employee" : <AddEmployee/>,
+            "Employee profile": <Profile />,
             "Add shift" : <Addshift/>,
+            "Shift details" : <ShiftDetails />,
             "Edit shift":<EditShift/>,
             "Availability pref": <AvailabilityPref/>,
             "Time off":<TimeOff/>,

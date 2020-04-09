@@ -13,12 +13,9 @@ class AvailabilityPref extends React.Component{
         return(
     <div>
         <div className="modalTitle">
-            <div className="close">x</div>
             <div clasName="TitleHero">AVAILABILITY PREFERENCES</div>
         </div>
             <div className="date">Starting on: DATE</div>
-
-            {/* this should probably be a form  */}
             <form className="availabilityOptions">
                 <label for="startTime">Start Time:</label>
                     <input type="time" id="startTime" name="startTime" />

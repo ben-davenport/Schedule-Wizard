@@ -1,5 +1,8 @@
 import React from 'react';
 import './Scheduler.css';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
+import openModal from '../../actions/openModal';
 
 class Scheduler extends React.Component{
     constructor(props){
@@ -14,13 +17,13 @@ class Scheduler extends React.Component{
         <div>
             <header className="title">
                 <h1>Scheduler</h1>
-                <div className="newShift">+</div>
+                <div className="newShift" onClick={()=>{this.props.openModal('open', "Add shift")}}>+</div>
             </header>
             <div className="calendar">
                 <ul>
                     <li className="date">
                         <li>Shift1 Time</li>
-                            <li>></li>
+                            <li onClick={()=>{this.props.openModal('open', "Shift details")}}>></li>
                         <li>Shift2</li>
                     </li>
                 </ul>
@@ -31,4 +34,11 @@ class Scheduler extends React.Component{
         </div>)
     }
 }
-export default Scheduler;
+
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators({
+        openModal: openModal,
+    }, dispatcher)
+};
+
+export default connect(null, mapDispatchToProps)(Scheduler);
