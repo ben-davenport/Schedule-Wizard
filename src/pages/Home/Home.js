@@ -71,7 +71,7 @@ class Home extends React.Component{
                     <input type="password" id="password" name="password" onChange={this.changePass} value={this.state.password}></input>
                     <br />
                     <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" onChange={this.passConfirm} value={this.state.changePassConfirm}></input>
+                    <input type="password" id="confirmPassword" name="confirmPassword" onChange={this.changePassConfirm} value={this.state.passConfirm}></input>
                     <br />
                         <button className="submitBtn" onClick={this.submitSignup}>Submit</button>
                     </form>
