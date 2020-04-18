@@ -10,6 +10,11 @@ export default(state={}, action)=>{
         return action.payload
     }
 
+    else if(action.type==="addEmployee"){
+        console.log(action)
+        return action.payload
+    }
+
     else if(action.type === "logout"){
         console.log(action)
         return {}
