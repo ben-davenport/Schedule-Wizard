@@ -5,6 +5,7 @@
 }
 .navBar{
     font-size: 18px;
+    background-color:rgb(71, 71, 71);
 }
 ul{
     list-style: none;
@@ -15,7 +16,7 @@ ul{
     /* list-style: none;
     display: flex;
     justify-content: space-around; */
-    background-color:rgb(71, 71, 71);
+    /* background-color:rgb(71, 71, 71); */
     color: darkgrey;
 }
 .mainNav li a{
@@ -27,14 +28,16 @@ ul{
 .navLink{
     text-decoration: none;
 }
-.navLink:hover{
-    color: white;
-}
+/* .navLink Link:hover{
+    color: rgba(255, 255, 255, 1);
+} */
 .logo{
     display: inline-block;
     font-size: 22px;
     margin-top: 10px;
     margin-left: 20px;
+    margin-right: 20px;
+    
 }
 .navbar-toggle{
     position: absolute;
@@ -53,6 +56,10 @@ ul{
     flex-direction: column;
     align-items: center;
     }
+.logo span{
+    font-size: 2rem;
+}
+
 
 @media screen and (min-width: 768px){
     .navBar{
@@ -68,15 +75,12 @@ ul{
     .mainNav li{
         margin: 0;
     }
-    .logo{
-        margin-top: 0;
-        border: 1px solid green;
-    }
+
     .navbar-toggle {
         display: none;
     }
     .logo:hover,
     .nav-links:hover{
-        color: white;
+        background-color: rgba(255, 255, 255, 0.164);
             }
-}
+        }

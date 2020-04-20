@@ -30,7 +30,6 @@ class SingleTO extends React.Component{
     render(){
         return(<div>
             <div className="title">
-                <div className="close">X</div>
                 <div className="titleContainer">
                     <div className="theTitle">New Time Off Request</div>
                 </div>

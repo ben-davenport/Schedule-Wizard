@@ -45,7 +45,7 @@ class Home extends React.Component{
             <div className="symbol">
                 <ul>
                     <li><a href="/"> <span className="fas fa-hat-wizard"/> </a></li>
-                </ul>
+                </ul> 
             </div>
             <div className="motto">
                 BE A SCHEDULING WIZ

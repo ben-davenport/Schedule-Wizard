@@ -1,8 +1,6 @@
 import React from 'react';
 import './Profile.css';
 
-//Modal
-
 class Profile extends React.Component{
     constructor(props){
         super(props)

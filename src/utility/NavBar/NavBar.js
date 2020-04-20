@@ -21,24 +21,25 @@ class NavBar extends React.Component{
         return(
         <nav className="navBar">
             <span className="navbar-toggle" id="js-navbar-toggle" 
-                // onClick={document.getElementById('js-menu').toggle('active')}
                 onClick={this.handleClick}>
                     <i className="fas fa-bars"></i>
             </span>
-            <a href="/u" className="logo">logo</a>
+            <Link to="/u/dashboard" className="logo"><span className="fas fa-hat-wizard"/></Link>
             <ul className="mainNav" id="js-menu">
                 <li>
                     <Link className="navLink" to="/">Notifications</Link></li>
                 <li>
                     <Link className="navLink" to="/u/dashboard">Dashboard</Link></li>
                 <li>
-                    <Link className="navLink" to="/u/admin/newshift">Scheduler</Link></li>
-                <li>
-                    <Link className="navLink" to="/u/timeoff">Time Off</Link></li>
+                    <Link className="navLink" to="/u/admin/scheduler">Scheduler</Link></li>
+                {/* <li>
+                    <Link className="navLink" to="/u/timeoff">Time Off</Link></li> */}
                 <li>
                     <Link className="navLink" to="/u/coworkers">Co-Workers</Link></li>
                 <li>
                     <Link className="navLink" to="/u/availability">Availability</Link></li>
+                <li>
+                    <Link className="navLink" to="/u/profile">Profile</Link></li>
             </ul>
         </nav>
         )
