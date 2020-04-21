@@ -31,7 +31,8 @@ class App extends React.Component{
             <Route path="/" component={Modal} />
             <Route exact path="/" component={Home} />
             <Route path="/u/dashboard" component={Dashboard}/>
-            <Route path="/u/coworkers" component={Employees}/>
+            <Route path="/u/coworkers/" component={Employees}/>
+            <Route path='/u/coworker/:profileId' component={Profile} />
             <Route exact path="/u/availability" component={Availability}/>
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path='/u/admin/scheduler' component={Scheduler} />

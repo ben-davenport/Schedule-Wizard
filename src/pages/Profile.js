@@ -1,16 +1,27 @@
 import React from 'react';
 import './Profile.css';
+import axios from 'axios';
+
 
 class Profile extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            first: 'Harry',
-            last: 'Potter',
-            initials: 'HP',
-            email: 'hpotter@gmail.com',
-            phone: '123-456-7890'
+            initials: '',
+            profile: {},
         }
+    }
+
+    async componentDidMount(){
+        const profileId = this.props.match.params.id;
+        const url = '${window.apiHost}/coworkers/${profileId}';
+        const axiosResponse = await axios.get(url);
+            console.log(axiosResponse.data);
+        // const initials = axiosResponse.data.firstname[0]
+        this.setState({
+                profile: axiosResponse.data,
+                initials: initials,
+            })
     }
 
     render(){
@@ -22,16 +33,11 @@ class Profile extends React.Component{
             <div classsName="details">
                 <div className="nameInfo">
                         <div className="initials">{this.state.initials}</div>
-                        <div className="name">{`${this.state.first} ${this.state.last}`}</div>
+                        <div className="name">{`${this.state.profile.firstname} ${this.state.profile.lastname}`}</div>
                 </div>
                 <ul className="email">
                     <li>Email: </li>
-                    <li>{this.state.email}</li>
-                </ul>
-                    
-                <ul className="phone">
-                    <li>Phone Number:</li>
-                    <li>{this.state.phone}</li>
+                    <li>{this.state.profile.email}</li>
                 </ul>
             </div>
         </div>)

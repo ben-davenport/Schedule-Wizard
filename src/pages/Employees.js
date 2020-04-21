@@ -4,6 +4,8 @@ import './Employees.css';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import openModal from '../actions/openModal';
+import axios from 'axios';
+import Profile from './Profile';
 
 
 
@@ -11,8 +13,22 @@ class Employees extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            
+            profiles: []
         }
+    }
+    componentDidMount(){
+        const axiosResponse = await axios.get(`${window.apiHost}/profiles`);
+        const profiles = axiosResponse.data.map((profile, i)=>{
+            return(
+                <div key={i}>
+                    <Profile abode={profile}/>
+                </div>
+            )
+        })
+        console.log(profiles)
+        this.setState({
+            profiles: profiles,
+        })
     }
 
     render(){
