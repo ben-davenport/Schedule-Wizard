@@ -1,6 +1,7 @@
 const initState = {
     openClose : "closed",
     content : "",
+    id: "",
 }
 
 export default(state=initState, action)=>{

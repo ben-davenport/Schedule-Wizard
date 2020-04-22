@@ -36,7 +36,7 @@ class App extends React.Component{
             <Route exact path="/u/availability" component={Availability}/>
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path='/u/admin/scheduler' component={Scheduler} />
-            <Route path='/u/profile' component={Profile} />
+            {/* <Route path='/u/profile' component={Profile} /> */}
 
 
         </Router>)

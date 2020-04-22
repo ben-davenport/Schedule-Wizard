@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import openModal from '../actions/openModal';
 import axios from 'axios';
-import Profile from './Profile';
+import EmployeeCard from '../utility/EmployeeCard';
+// import Profile from './Profile';
 
 
 
@@ -13,19 +14,22 @@ class Employees extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            profiles: []
+            profiles: [],
         }
     }
-    componentDidMount(){
+
+    //make an axios call, get all the profiles for that business
+    async componentDidMount(){
         const axiosResponse = await axios.get(`${window.apiHost}/profiles`);
         const profiles = axiosResponse.data.map((profile, i)=>{
+            const initials = `${profile.firstname[0]}${profile.lastname[0]}`
             return(
-                <div key={i}>
-                    <Profile abode={profile}/>
-                </div>
+                <li key={i}>
+                    <EmployeeCard profile={profile} initials={initials} />
+                    {/* <div className="toProfile" onClick={()=>{this.props.openModal('open', "Employee profile")}}>></div> */}
+                </li>
             )
         })
-        console.log(profiles)
         this.setState({
             profiles: profiles,
         })
@@ -36,31 +40,18 @@ class Employees extends React.Component{
         <div>
             <header>
                 <div className="title">Employees</div>
-                <div className="addEmployee" onClick={()=>{this.props.openModal('open', "Add employee")}}>+</div>
+                <div className="addEmployee" onClick={()=>{this.props.openModal('open', "Add employee", "")}}>+</div>
             </header>
             <ul className="employees">
-                <li>
-                    <div className="identifyingInfo">
-                        <span className="initials">HP</span>
-                        <span className="name">Harry Potter</span>
-                    </div>
-                    <div className="toProfile" onClick={()=>{this.props.openModal('open', "Employee profile")}}>></div>
-                </li>
-                <li>
-                    <div className="identifyingInfo">
-                        <span className="initials">AD</span>
-                        <span className="name">Albus Dumbledore</span>
-                    </div>
-                    <div className="toProfile"><a href="#">></a></div>
-                </li>
+                {this.state.profiles}
             </ul>
         </div>)
     }
 }
+
 function mapDispatchToProps(dispatcher){
     return bindActionCreators({
         openModal: openModal,
     }, dispatcher)
 };
-
 export default connect(null, mapDispatchToProps)(Employees);

@@ -40,7 +40,7 @@ class Modal extends React.Component{
             "Edit shift":<EditShift/>,
             "Availability pref": <AvailabilityPref/>,
             "Time off":<TimeOff/>,
-            "Profile":<Profile/>,
+            "Profile": <Profile/>,
         };
         let modalContent
         if(contentObj[this.props.siteModal.content]){
@@ -51,6 +51,7 @@ class Modal extends React.Component{
         <div className="site-modal" style={modalInLineStyle}>
             <div className="modal-content">
                 <span onClick={this.props.openModal} className="close">&times;</span>
+                {console.log(modalContent)}
                 {modalContent}
             </div>
         </div>)
