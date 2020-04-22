@@ -3,6 +3,7 @@ import './Scheduler.css';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import openModal from '../../actions/openModal';
+import axios from 'axios';
 
 class Scheduler extends React.Component{
     constructor(props){
@@ -10,6 +11,11 @@ class Scheduler extends React.Component{
         this.state = {
             
         }
+    }
+
+    async componentDidMount(){
+        const axiosResponse = await axios.get(`${window.apiHost}/allshifts`)
+        console.log(axiosResponse)
     }
 
     render(){

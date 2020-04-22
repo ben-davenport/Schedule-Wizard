@@ -3,6 +3,7 @@
 // calendar with your shifts
 import React from 'react';
 import './Dashboard.css';
+import axios from 'axios';
 
 class Dashboard extends React.Component{
     constructor(props){
@@ -12,6 +13,11 @@ class Dashboard extends React.Component{
         }
     }
 
+    async componentDidMount(){
+        const axiosResponse = await axios.get(`${window.apiHost}/allshifts`)
+        console.log(axiosResponse)
+    }
+    
     render(){
         return(
         <div className="frame">
