@@ -23,7 +23,7 @@ class EmployeeCard extends React.Component{
                     <span className="initials">{this.props.initials}</span>
                     <span className="name">{profile.firstname} {profile.lastname}</span>
                 </div>
-                <Link className="toProfile" to={`/u/coworker/${profile.id}`}> ></Link>
+                {/* <Link className="toProfile" to={`/u/coworker/${profile.id}`}> ></Link> */}
                 <div className="toProfile" onClick={()=>{
                     this.props.openModal('open', "Employee profile", `${this.state.id}`)
                     }}>></div>
