@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import addShiftAction from '../../actions/addShiftAction';
+import axios from 'axios';
 
 class Addshifts extends React.Component{
     constructor(props){
@@ -16,7 +17,11 @@ class Addshifts extends React.Component{
             shiftEmployee: "",
             shiftNotes: "",
         }
-    } 
+    }
+    async componentDidMount(){
+        const employeesResponse = await axios.get(`${window.apiHost}/profiles`)
+            console.log(employeesResponse.data)
+    }
 
     changeEmail = (e) =>{this.setState({date: e.target.value})}
     changeStart = (e) => {this.setState({start: e.target.value})}

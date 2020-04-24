@@ -37,8 +37,6 @@ class App extends React.Component{
             <Route path="/u/myschedule" component={MySchedule}/>
             <Route path='/u/admin/scheduler' component={Scheduler} />
             {/* <Route path='/u/profile' component={Profile} /> */}
-
-
         </Router>)
     }
 }

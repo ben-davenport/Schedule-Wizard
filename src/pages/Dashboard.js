@@ -9,23 +9,38 @@ class Dashboard extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            
+            nextShifts: [],
         }
     }
 
     async componentDidMount(){
-        const axiosResponse = await axios.get(`${window.apiHost}/allshifts`)
+        const axiosResponse = await axios.get(`${window.apiHost}/todayshifts`)
         console.log(axiosResponse)
-    }
+        const shifts = axiosResponse.data
+        let nextShift = shifts.map((shift,i)=>{
+                return(
+                    <>
+                        <li key={i} id="day">{shift.start_time}</li>
+                        <li key={i} id="startTime">{shift.start_time}</li>
+                        <li key={i} id="endTime">{shift.end_time}</li>
+                    </>
+                    )
+                    })
+        if(shifts.length<1){
+            nextShift= <li>No Upcoming Shifts</li>
+        }
+        this.setState({
+            nextShifts: nextShift
+        })
+        }
+    
     
     render(){
         return(
         <div className="frame">
             <div className="nextShift">
                 <ul>Next Shift
-                    <li id="day">Day, Date</li>
-                    <li id="startTime">Start Time</li>
-                    <li id="endTime">End Time</li>
+                    {this.state.nextShifts}
                 </ul>
             </div>
             <div className="todaySchedule">
