@@ -1,5 +1,6 @@
 export default(state={}, action)=>{
     console.log(`firing up authReducer`)
+    
     if (action.type === "login"){
         console.log(action)
         return action.payload
