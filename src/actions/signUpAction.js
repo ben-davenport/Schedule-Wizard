@@ -13,4 +13,4 @@ export default(data)=>{
         payload: data,
         //payload: axiosResponse
     }
-}
+};
