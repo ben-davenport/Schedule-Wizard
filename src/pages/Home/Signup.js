@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import signUpAction from '../../actions/signUpAction';
 
 
+
 class Signup extends React.Component{
     constructor(props){
         super(props)
@@ -14,6 +15,18 @@ class Signup extends React.Component{
             email: "",
             password: "",
             passConfirm: "",
+            msg: '',
+        }
+    }
+
+    componentDidUpdate(prevProps,prevState){
+        if((this.props.auth.msg === 'userExists') && (prevProps.auth.msg !== 'userExists')){
+            this.setState({
+                msg: "This user already exists. Please log in or create a new account."
+            })
+        }else if((this.props.auth.msg === 'userAdded') && (prevProps.auth.msg !== 'userAdded')){
+            // user was added. close the modal.
+            // useHistory.push("/u/dashboard");
         }
     }
 
@@ -30,11 +43,14 @@ class Signup extends React.Component{
         console.log('signup form submitted')
         this.props.signUpAction(formData);
         };
+    
+    
 
     render(){
         return(
         <div>
             <header className="title">Register<br/></header>
+        <h3>{this.state.msg}</h3>
             <form>
                     <br />
                     <label htmlFor="firstName">First Name:</label>
